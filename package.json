@@ -1,0 +1,30 @@
+{
+  "name": "broker-types",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "tscomp": "npx tsc-watch",
+    "tslint": "npx esw -w src/**/*.ts",
+    "tstest": "node_modules/mocha/bin/mocha.js -w --parallel dist/**/*.spec.js"
+
+  },
+  "devDependencies": {
+    "tsc-watch": "^6.0.4",
+    "chai": "^5.1.0",
+    "@types/chai": "^4.3.12",
+    "@types/mocha": "^10.0.6",
+    "@types/uuid": "^9.0.8",
+    "mocha": "^10.3.0",
+    "eslint-watch": "^8.0.0",
+  },
+  "dependencies": {
+    "immer": "^10.1.1",
+    "maybe": "github:GrantS1515/maybe",
+    "result": "github:GrantS1515/result",
+    "uuid": "^9.0.1",
+  },
+  "author": "",
+  "license": "ISC"
+}
