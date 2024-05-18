@@ -6,3 +6,4 @@ export type Event = {
     id: string;
     pid: string;
 };
+export declare function events2object(events: Map<string, Set<Event>>): object;
