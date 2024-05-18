@@ -1,4 +1,6 @@
-export type State<T extends object> = {
+export type State<T extends {
+    [key: string]: any;
+}> = {
     read: T;
     events: Map<string, Set<Event>>;
 };
