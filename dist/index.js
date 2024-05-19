@@ -2,11 +2,8 @@ import { enableMapSet } from "immer";
 enableMapSet();
 export function events2object(events) {
     const myObj = {};
-    const eventsObj = Object.fromEntries(events);
-    const eventsKeys = Object.keys(eventsObj);
-    eventsKeys.forEach((k) => {
-        // @ts-ignore
-        myObj[k] = Array.from(eventsObj[k]);
-    });
+    for (const [key, value] of events) {
+        myObj[key] = Array.from(value);
+    }
     return myObj;
 }

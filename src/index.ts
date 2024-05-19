@@ -13,13 +13,9 @@ export type Event = {
 }
 
 export function events2object(events: Map<string, Set<Event>>): object {
-	const myObj: { [key: string]: any } = {};
-	const eventsObj = Object.fromEntries(events);
-	const eventsKeys = Object.keys(eventsObj)
-	eventsKeys.forEach((k: string) => {
-		// @ts-ignore
-		myObj[k] = Array.from(eventsObj[k])	
-	})
-	
+	const myObj: { [key: string]: Event[] } = {};
+	for (const [key, value] of events) {
+		myObj[key] = Array.from(value)
+	}
 	return myObj
 }
