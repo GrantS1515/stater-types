@@ -10,6 +10,7 @@ export type State<T> = {
 export type Event = {
 	id: string,
 	pid: string,
+	type: string,
 }
 
 export function events2object(events: Map<string, Set<Event>>): object {
